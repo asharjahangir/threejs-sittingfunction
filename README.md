@@ -14,7 +14,7 @@ var player; // You need to add your player and assign it to this variable
 The GLB character should have at least 2 animations embedded into it:
 * Walking animation
 * Sitting animation
-Other than that the character should have some sort of a character controller or a movement script that would allow the character to move around the scene.
+  Other than that the character should have some sort of a character controller or a movement script that would allow the character to move around the scene.
 ### Seats
 ```
 var seats; // You need to add your seats and put them inside an array and assign it to this variable
