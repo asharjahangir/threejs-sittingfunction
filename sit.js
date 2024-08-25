@@ -5,7 +5,7 @@ var player; // add your player path or object here
 var seats;// add an array of seat objects here
 // For the button, need to program so that only the current user is able to see the button just like "Hotspot", can also remove button and use seat model clickable
 var sit; // add a sitting button path or object here
-var otherAvatars; // add other players for exceptions // NPC & Other players (Replace with players in the server and NPC to check if Seats are occupied or not)
+var otherPlayers; // add other players for exceptions // NPC & Other players (Replace with players in the server and NPC to check if Seats are occupied or not)
 var seatChecker; // add a small cube object to act as a sensor to check the height of the seat
 var smallestDistance, distance, closestSeat, closestSeatBB, seatHeight, offsetZ, seatBB, otherAvatarBB, seatObjectBB, sittingHeight;
 smallestDistance = Infinity; // placeholder variable for the smallestDistance, it will be use to check which seat is closest to the avatar
@@ -229,9 +229,9 @@ function distanceCalculation(seat) { // Determine the distance between avatar an
 	distance = player.position.distanceTo(seat.position);
 
 	if (distance < smallestDistance) {
-		// Check if the seat is occupied by iterating over otherAvatars
-		for (var i = 0; i < otherAvatars.length; i++) {
-			otherAvatarBB = new THREE.Box3().setFromObject(otherAvatars[i]);
+		// Check if the seat is occupied by iterating over otherPlayers
+		for (var i = 0; i < otherPlayers.length; i++) {
+			otherAvatarBB = new THREE.Box3().setFromObject(otherPlayers[i]);
 			if (otherAvatarBB.intersectsBox(seatBB)) {
 				// Update smallestDistance and closestSeat to the next closest seat
 				smallestDistance = Infinity;
