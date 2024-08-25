@@ -5,6 +5,8 @@ The user clicks the sit button, the character navigates around the seat and sits
 ![GIF](https://github.com/user-attachments/assets/e15fe495-ca34-4c4f-b67d-c47eec5ca859)
 ## Getting Started
 There is only one file called the sit.js file which has all the code for the sitting functionality.
+### Scene
+A scene needs to be set up beforehand with the character inside the scene. 
 ### Character
 ```
 var player; // You need to add your player and assign it to this variable
@@ -13,8 +15,6 @@ The GLB character should have at least 2 animations embedded into it:
 * Walking animation
 * Sitting animation
 Other than that the character should have some sort of a character controller or a movement script that would allow the character to move around the scene.
-### Scene
-A scene needs to be set up beforehand with the character inside the scene. 
 ### Seats
 ```
 var seats; // You need to add your seats and put them inside an array and assign it to this variable
